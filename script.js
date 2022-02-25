@@ -6,11 +6,12 @@ const circles = document.querySelectorAll('.kesku-circles');
 const keskuLogo = document.querySelector('#kesku-svg-logo');
 const keskuApiPath = document.querySelector('#kesku-api-path');
 
-const parrafo = document.querySelector('.pprueba');
+/*const parrafo = document.querySelector('.pprueba');
 const offset = document.querySelector('.offset');
 const offsetslice = document.querySelector('.offsetslice');
 
 //parrafo.textContent="prueba9";
+*/
 const keskuTriang = document.getElementById('keskuTriang');
 keskuTriang.style.visibility='visible'
 window.addEventListener('DOMContentLoaded', function() {
@@ -47,7 +48,7 @@ window.addEventListener('scroll', function() {
     //offset.textContent=svg.style.strokeDashoffset;
     //offsetslice.textContent=svg.style.strokeDashoffset.slice(0, -2);
 
-    console.log("el dashoffset", svg.style.strokeDashoffset);
+    //console.log("el dashoffset", svg.style.strokeDashoffset);
     //console.log("el slice es: ", svg.style.strokeDashoffset.slice(0, -2));
 
     if(svg.style.strokeDashoffset <= 100 || svg.style.strokeDashoffset.slice(0, -2) <= 100) {
