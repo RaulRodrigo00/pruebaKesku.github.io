@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-content{
+  display: grid;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Spline Sans', sans-serif;
+}
+
+.header {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.navbar {
+  background-color: #333333;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 80px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 10px;
+  transition: 0.3s ease all;
+}
+
+.nav-link:hover {
+  letter-spacing: 2px;
+}
+
+.kesku-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+}
+
+.svg {
+  transform: translateY(-10%);
+  animation: drop 1s forwards;
+}
+
+.kesku-logo {
+  width: 300px;
+  opacity: 0;
+  transform: scale(0.7);
+  animation: appear 500ms forwards cubic-bezier(0.29, 0.36, 0.46, 1.32);
+}
+
+.kesku-desc {
+  color: #fff;
+  margin-left: 10px;
+}
+
+.kesku-desc h1 {
+  font-size: 2.5rem;
+  opacity: 0;
+  transform: scale(0.7);
+  animation: appear 1s forwards;
+}
+
+.kesku-desc p {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1.75rem;
+  position: relative;
+  width: max-content;
+}
+
+.kesku-desc p::before,
+.kesku-desc p::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.kesku-desc p::before {
+  background-color: #333333;
+  animation: typewriter 2.5s steps(37) 1s forwards;
+}
+
+.kesku-desc p::after {
+  width: .125rem;
+  background-color: white;
+  animation: 
+    typewriter 2.5s steps(37) 1s forwards,
+    blink 500ms steps(37) infinite;
+}
+
+.kesku-circuit {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#kesku-svg-logo {
+  opacity: 0;
+  transition: 0.5s ease opacity;
+}
+
+#kesku-svg-logo.animated {
+  opacity: 1;
+}
+
+.kesku-svg {
+  height: 100%;
+}
+
+.footer {
+  min-height: 100px;
+  background-color: #86979F;
+}
+
+.footer-inner {
+  color: #fff;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-inner p {
+  font-size: 1.25rem;
+}
+
+.github-link {
+  display: flex;
+  align-items: center;
+}
+
+.github-link a {
+  margin-left: 5px;
+}
+
+.kesku-circles {
+  opacity: 0;
+  transform: scale(0.7);
+  transform-origin: center top;
+  transition: 500ms cubic-bezier(.29,.36,.42,1.21) all;
+}
+
+.kesku-circles.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#opacity-path {
+  opacity: 0.5;
+  filter: blur(2px);
+}
+
+#kesku-api-path {
+  opacity: 0;
+  transition: 0.5s ease opacity;
+}
+
+#kesku-api-path.show {
+  opacity: 1;
+}
+
+@media (max-width: 1200px) {
+  .svg {
+    height: 50vh;
+  }
+
+  .kesku-logo {
+    width: 200px;
+  }
+
+  .kesku-circuit {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .kesku-header {
+    flex-direction: column;
+  }
+
+  .kesku-logo {
+    width: 200px;
+  }
+
+  .kesku-circuit {
+    width: 75%;
+  }
+
+  .footer-inner {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .svg {
+    height: 50vh;
+  }
+
+  .kesku-header {
+    flex-direction: column;
+  }
+
+  .kesku-logo {
+    width: 40%;
+  }
+
+  .kesku-desc {
+    margin-left: 0px;
+  }
+
+  .kesku-desc h1 {
+    font-size: 1.4rem;
+  }
+
+  .kesku-desc p {
+    font-size: 1rem;
+  }
+
+  .kesku-circuit {
+    width: 90%;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+  }
+
+  .footer-inner p {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes drop {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.kesku-circless {
+  transform: scaleY(-1);
+  transform-origin: center bottom;
+  opacity: 0;
+  transition: 1s ease all;
+}
+
+.kesku-circless.triangAnimation{
+  transform: scaleY(0.9);
+  opacity: 1;
+}
+
+/* @keyframes draw {
+  to {
+    
+  }
+} */
+
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+
+  #kesku-svg-logo {
+    opacity: 1;
+  }
+
+  #kesku-api-path {
+    opacity: 1;
+    transition: 0.5s ease opacity;
+  }
+
+  .kesku-circles {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .kesku-circless {
+    transform: scaleY(0.9);
+    opacity: 1;
+  }
+
+  .kesku-desc p::after {
+    width: .125rem;
+    background-color: transparent;
+    animation: 
+      typewriter 5s steps(37) 1s forwards,
+      blink 500ms steps(37) infinite;
+  }
+}
