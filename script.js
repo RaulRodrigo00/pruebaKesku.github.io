@@ -41,7 +41,7 @@ window.addEventListener('scroll', function() {
     console.log("el dashoffset", svg.style.strokeDashoffset);
     //console.log("el slice es: ", svg.style.strokeDashoffset.slice(0, -2));
 
-    if(svg.style.strokeDashoffset <= 150 || svg.style.strokeDashoffset.slice(0, -2) <= 150) {
+    if(svg.style.strokeDashoffset <= 200 || svg.style.strokeDashoffset.slice(0, -2) <= 200) {
       keskuApiPath.classList.add('show');
       keskuLogo.classList.add('animated');
       keskuTriang.classList.add('triangAnimation');
