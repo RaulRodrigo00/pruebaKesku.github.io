@@ -9,6 +9,8 @@ const keskuApiPath = document.querySelector('#kesku-api-path');
 const keskuTriang = document.getElementById('keskuTriang');
 keskuTriang.style.visibility='visible';
 
+const offset = document.querySelector('.offset');
+
 
 window.addEventListener('DOMContentLoaded', function() {
   svgPaths.forEach(svg => {
@@ -39,6 +41,7 @@ window.addEventListener('scroll', function() {
 
     console.log("prueba13");
     console.log("el dashoffset", svg.style.strokeDashoffset);
+    offset.textContent = svg.style.strokeDashoffset;
     //console.log("el slice es: ", svg.style.strokeDashoffset.slice(0, -2));
 
     if(svg.style.strokeDashoffset <= 100 || svg.style.strokeDashoffset.slice(0, -2) <= 100) {
