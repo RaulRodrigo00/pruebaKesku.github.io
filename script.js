@@ -37,7 +37,7 @@ window.addEventListener('scroll', function() {
     svg.style.strokeDashoffset = length - draw;
 
 
-
+    console.log("prueba11")
     console.log("el dashoffset", svg.style.strokeDashoffset);
     //console.log("el slice es: ", svg.style.strokeDashoffset.slice(0, -2));
 
