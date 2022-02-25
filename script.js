@@ -27,8 +27,8 @@ window.addEventListener('scroll', function() {
   
     svg.style.strokeDashoffset = length;
 
-    const scrollpercent = ((document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight))+10;
-
+    const scrollpercent = ((document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) ;
+    console.log(scrollpercent)
     const draw = length * scrollpercent;
 
     svg.style.strokeDashoffset = length - draw;
@@ -39,7 +39,7 @@ window.addEventListener('scroll', function() {
       keskuApiPath.classList.remove('show');
     }
 
-    if(svg.style.strokeDashoffset == 0 || svg.style.strokeDashoffset.slice(0, -2) == 0) {
+    if(svg.style.strokeDashoffset == 10 || svg.style.strokeDashoffset.slice(0, -2) == 0) {
       keskuLogo.classList.add('animated');
       keskuTriang.classList.add('triangAnimation');
     } else {
