@@ -27,7 +27,7 @@ window.addEventListener('scroll', function() {
   
     svg.style.strokeDashoffset = length;
 
-    const scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+    const scrollpercent = ((document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight))+10;
 
     const draw = length * scrollpercent;
 
