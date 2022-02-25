@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', function() {
     keskuTriang.classList.remove('triangAnimation')
 
 
-
+    console.log("prueba 36");
 
     window.addEventListener('scroll', function() {
       svgPaths.forEach(svg => {
