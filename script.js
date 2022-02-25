@@ -10,7 +10,7 @@ const parrafo = document.querySelector('.pprueba');
 const offset = document.querySelector('.offset');
 const offsetslice = document.querySelector('.offsetslice');
 
-parrafo.textContent="prueba8";
+parrafo.textContent="prueba9";
 const keskuTriang = document.getElementById('keskuTriang');
 keskuTriang.style.visibility='visible'
 window.addEventListener('DOMContentLoaded', function() {
@@ -56,7 +56,7 @@ window.addEventListener('scroll', function() {
       keskuApiPath.classList.remove('show');
     }
 
-    if(svg.style.strokeDashoffset <= 15 || svg.style.strokeDashoffset.slice(0, -2) == 0) {
+    if(svg.style.strokeDashoffset <= 150 || svg.style.strokeDashoffset.slice(0, -2) <= 150) {
       keskuLogo.classList.add('animated');
       keskuTriang.classList.add('triangAnimation');
     } else {
