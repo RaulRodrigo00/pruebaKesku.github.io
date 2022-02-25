@@ -6,6 +6,9 @@ const circles = document.querySelectorAll('.kesku-circles');
 const keskuLogo = document.querySelector('#kesku-svg-logo');
 const keskuApiPath = document.querySelector('#kesku-api-path');
 
+const parrafo = document.querySelector('.pprueba');
+
+parrafo.textContent="prueba5"
 const keskuTriang = document.getElementById('keskuTriang');
 keskuTriang.style.visibility='visible'
 window.addEventListener('DOMContentLoaded', function() {
@@ -38,6 +41,8 @@ window.addEventListener('scroll', function() {
     const draw = length * scrollpercent;
 
     svg.style.strokeDashoffset = length - draw;
+    console.log("el dashoffset", svg.style.strokeDashoffset);
+    console.log("el slice es: ", svg.style.strokeDashoffset.slice(0, -2));
 
     if(svg.style.strokeDashoffset <= 100 || svg.style.strokeDashoffset.slice(0, -2) <= 100) {
       keskuApiPath.classList.add('show');
@@ -45,7 +50,7 @@ window.addEventListener('scroll', function() {
       keskuApiPath.classList.remove('show');
     }
 
-    if(svg.style.strokeDashoffset == 0 || svg.style.strokeDashoffset.slice(0, -2) == 0) {
+    if(svg.style.strokeDashoffset <= 10 || svg.style.strokeDashoffset.slice(0, -2) == 0) {
       keskuLogo.classList.add('animated');
       keskuTriang.classList.add('triangAnimation');
     } else {
