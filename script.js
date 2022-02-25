@@ -8,7 +8,7 @@ const keskuApiPath = document.querySelector('#kesku-api-path');
 
 const parrafo = document.querySelector('.pprueba');
 
-parrafo.textContent="prueba6";
+parrafo.textContent="prueba7";
 const keskuTriang = document.getElementById('keskuTriang');
 keskuTriang.style.visibility='visible'
 window.addEventListener('DOMContentLoaded', function() {
