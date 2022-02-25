@@ -50,7 +50,7 @@ window.addEventListener('scroll', function() {
       keskuApiPath.classList.remove('show');
     }
 
-    if(svg.style.strokeDashoffset <= 15 || svg.style.strokeDashoffset.slice(0, -2) <= 15) {
+    if(svg.style.strokeDashoffset <= 15 || svg.style.strokeDashoffset.slice(0, -2) <= 0) {
       keskuLogo.classList.add('animated');
       keskuTriang.classList.add('triangAnimation');
     } else {
