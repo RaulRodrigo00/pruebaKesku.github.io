@@ -8,7 +8,7 @@ const keskuApiPath = document.querySelector('#kesku-api-path');
 
 const parrafo = document.querySelector('.pprueba');
 
-parrafo.textContent="prueba5"
+parrafo.textContent="prueba6";
 const keskuTriang = document.getElementById('keskuTriang');
 keskuTriang.style.visibility='visible'
 window.addEventListener('DOMContentLoaded', function() {
@@ -37,12 +37,12 @@ window.addEventListener('scroll', function() {
     if(scrollpercent === .1){
       scrollpercent = 0;
     }
-    console.log(scrollpercent)
+    //  console.log(scrollpercent)
     const draw = length * scrollpercent;
 
     svg.style.strokeDashoffset = length - draw;
     console.log("el dashoffset", svg.style.strokeDashoffset);
-    console.log("el slice es: ", svg.style.strokeDashoffset.slice(0, -2));
+    //console.log("el slice es: ", svg.style.strokeDashoffset.slice(0, -2));
 
     if(svg.style.strokeDashoffset <= 100 || svg.style.strokeDashoffset.slice(0, -2) <= 100) {
       keskuApiPath.classList.add('show');
@@ -50,7 +50,7 @@ window.addEventListener('scroll', function() {
       keskuApiPath.classList.remove('show');
     }
 
-    if(svg.style.strokeDashoffset <= 10 || svg.style.strokeDashoffset.slice(0, -2) == 0) {
+    if(svg.style.strokeDashoffset <= 15 || svg.style.strokeDashoffset.slice(0, -2) <= 15) {
       keskuLogo.classList.add('animated');
       keskuTriang.classList.add('triangAnimation');
     } else {
