@@ -39,13 +39,14 @@ window.addEventListener('scroll', function() {
     svg.style.strokeDashoffset = length - draw;
 
 
-    console.log("prueba13");
+    console.log("prueba14");
     console.log("el dashoffset", svg.style.strokeDashoffset);
     offset.textContent = svg.style.strokeDashoffset;
     //console.log("el slice es: ", svg.style.strokeDashoffset.slice(0, -2));
 
     if(svg.style.strokeDashoffset <= 300 || svg.style.strokeDashoffset.slice(0, -2) <= 300) {
       keskuApiPath.classList.add('show');
+      console.log("los muestra")
     } else {
       keskuApiPath.classList.remove('show');
 
