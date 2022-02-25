@@ -216,7 +216,7 @@ body {
 
 @media (max-width: 500px) {
   .svg {
-    height: 40vh;
+    height: 50vh;
   }
 
   .kesku-header {
