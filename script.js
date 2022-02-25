@@ -44,9 +44,8 @@ window.addEventListener('scroll', function() {
     offset.textContent = svg.style.strokeDashoffset;
     //console.log("el slice es: ", svg.style.strokeDashoffset.slice(0, -2));
 
-    if(svg.style.strokeDashoffset <= 100 || svg.style.strokeDashoffset.slice(0, -2) <= 100) {
+    if(svg.style.strokeDashoffset <= 300 || svg.style.strokeDashoffset.slice(0, -2) <= 300) {
       keskuApiPath.classList.add('show');
-
     } else {
       keskuApiPath.classList.remove('show');
 
